@@ -17,6 +17,6 @@ Route::get('/', function () {
     return redirect('https://rintegrate.com');
 });
 
-Route::get("/{slug_product}", function($slug_product){
+Route::get("/ciclismo/linterna-led-para-bicicleta", function(){
     return view('lp-product');
 });
