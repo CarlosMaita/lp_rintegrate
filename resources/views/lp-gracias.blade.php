@@ -2,7 +2,7 @@
 
 
 @section('title')
-    lp de Producto
+ Gracias - {{$p->name}} 
 @endsection
 
 @section('metas')
