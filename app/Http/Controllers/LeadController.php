@@ -23,7 +23,7 @@ class LeadController extends Controller
         $lead->source = parse_url($request->header('Referer'), PHP_URL_PATH) ;
         $lead->save();
         
-        return redirect()->route('product.gracias', [
+        return redirect()->route('products.gracias', [
             'interest' => $request->interest_slug,
             'product' => $request->product_slug,
         ]);

@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="https://rintegrate.com/assets/img/favicon.png" />
 
 
-    <title>Rintegrate Landing - @yield('title')</title>
+    <title>Rintegrate - @yield('title')</title>
     @vite('resources/css/app.css')
     @yield('metas')
 
@@ -30,5 +30,9 @@
 
     <!-- footer -->
     @yield('footer')
+
+    
+   
+
 </body>
 </html>

@@ -21,7 +21,12 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('image_main')->nullable();
             $table->string('image_second')->nullable();
-            $table->string('price')->nullable();
+            $table->string('image_background')->nullable();
+            $table->string('title_features')->nullable();
+            $table->string('subtitle_features')->nullable();
+            $table->string('color_main')->default("#FF3737");
+            $table->string('features')->nullable();
+            $table->decimal('price', 8, 2, false)->nullable();
             $table->string('status')->default('new');
             //interest_id is a foreign key to interests table
             $table->unsignedBigInteger('interest_id');
