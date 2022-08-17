@@ -120,8 +120,8 @@ $color = $p->color_main;
         >
         <div class="backdrop-blur-sm bg-black/10 xl:h-screen pt-10 relative">
                 <div class="text-center py-10  ">
-                    <p class="text-main-color text-medium md:text-xl">{{$p->title_features}}</p>
-                    <h2 class="text-white text-2xl md:text-5xl font-bold">{{$p->subtitle_features}}
+                    <p class="text-main-color text-medium md:text-xl">{{$p->subtitle_features}}</p>
+                    <h2 class="text-white text-2xl md:text-5xl font-bold">{{$p->title_features}}
                     </h2>
                 </div>
             <div class="block space-y-5 xl:flex">

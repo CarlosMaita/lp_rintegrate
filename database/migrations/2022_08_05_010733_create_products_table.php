@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('title_features')->nullable();
             $table->string('subtitle_features')->nullable();
             $table->string('color_main')->default("#FF3737");
-            $table->string('features')->nullable();
+            $table->text('features')->nullable();
             $table->decimal('price', 8, 2, false)->nullable();
             $table->string('status')->default('new');
             //interest_id is a foreign key to interests table
