@@ -22,6 +22,14 @@
     <meta property="twitter:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
     <meta property="twitter:image" content="{{Storage::url($p->image_main)}}">
 
+    {{-- metas de producto --}}
+    <meta property="product:brand" content="Rintegrate">
+    <meta property="product:price:amount" content="{{$p->price}}">
+    <meta property="product:price:currency" content="USD">
+    <meta property="product:condition" content="new">
+    <meta property="product:availability" content="in stock">
+    <meta property="product:retailer_item_id" content="{{$p->slug}}-{{$p->id}}">
+
 @endsection
 @php
 $color = $p->color_main;
