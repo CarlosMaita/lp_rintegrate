@@ -23,7 +23,7 @@
     <meta property="twitter:image" content="{{Storage::url($p->image_main)}}">
 
     {{-- metas de producto --}}
-    <meta property="product:brand" content="Rintegrate">
+    {{-- <meta property="product:brand" content="Rintegrate"> --}}
     <meta property="product:price:amount" content="{{$p->price}}">
     <meta property="product:price:currency" content="USD">
     <meta property="product:condition" content="new">
