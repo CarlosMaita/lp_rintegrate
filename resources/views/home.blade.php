@@ -50,6 +50,7 @@
                         </div>
                     </a>
                     <div class="card-body space-y-3 px-2 py-2 xl:px-5 xl:py-5">
+                        <a href="{{route('products.lp',[ $p->interest->slug, $p->slug])}}"  class="">
                         <h5 class="card-title font-bold uppercase">{{$p->name}}</h5>
                         <p class="card-text text-gray-600 lowercase">{{$p->description}}</p>
                         @if($p->status == "disponible")
@@ -74,6 +75,7 @@
                             Producto No disponible
                         </span>
                         @endif
+                    </a>
                     </div>
                 </div>
             @endforeach

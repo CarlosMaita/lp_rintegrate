@@ -124,11 +124,11 @@ $color = $p->color_main;
     </div>
 
     {{-- beneficios --}}
-    <section class=" bg-cover bg-imagen-background bg-[right_-15rem_top_0rem]  pb-20 xl:h-screen"
+    <section class=" bg-cover bg-imagen-background bg-[right_-15rem_top_0rem]  xl:pb-20 xl:h-screen"
         >
-        <div class="backdrop-blur-sm bg-black/10 xl:h-screen pt-10 relative">
+        <div class="backdrop-blur-sm bg-black/10 h-screen xl:h-screen pt-10 pb-20 relative">
                 <div class="text-center py-10  ">
-                    <p class="text-main-color text-medium md:text-xl">{{$p->subtitle_features}}</p>
+                    <p class="text-main-color text-medium font-semibold md:text-xl">{{$p->subtitle_features}}</p>
                     <h2 class="text-white text-2xl md:text-5xl font-bold">{{$p->title_features}}
                     </h2>
                 </div>
@@ -147,7 +147,7 @@ $color = $p->color_main;
         </div>
     </section>
 
-    <div class="xl:flex xl:justify-start bg-main-color py-5">
+    <div class="xl:flex xl:justify-start bg-main-color py-5 ">
         {{-- imgen de producto --}}
      <section class="bg-main-color  h-72 xl:w-1/2 -mt-10 xl:-mt-5">
           <div class="bg-white  h-72 w-72 xl:w-[28rem] mx-auto pt-5 -translate-y-10 transition hover:scale-110 ease-in-out delay-150">
