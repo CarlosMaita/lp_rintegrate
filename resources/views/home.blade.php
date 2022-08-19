@@ -28,7 +28,7 @@
 @endsection
 
 @section('content')
-   <section class="min-h-full bg-white py-10">
+<section class="min-h-screen bg-white py-10">
         <h1 class="text-4xl xl:text-5xl font-bold text-center text-gray-800">Tienda Rintegrate</h1>
         <h2 class="text-center text-gray-500 text-base xl:text-2xl">Productos preferidos por nuestros clientes</h2>
         <p class="text-center">
@@ -81,12 +81,24 @@
             @endforeach
         </div>
         
-        {{-- ver mas Productos --}}
-        <div class="flex justify-center mt-4">
+        @if(count($products)>0)
+         {{-- ver mas Productos --}}
+         {{-- <div class="flex justify-center mt-4">
             <a href="#" class="text-black border-2 opacity-60 hover:opacity-100  py-2 px-4 rounded-md">
                 Ver más productos
             </a>
+        </div> --}}
+        @else
+        <p class="mx-auto text-center text-gray-500">
+            No hay productos disponibles para mostrar
+        </p>
+        {{-- ver mas Productos --}}
+        <div class="flex justify-center mt-4">
+            <a href="https://rintegrate.com" class="text-black border-2 opacity-60 hover:opacity-100  py-2 px-4 rounded-md">
+                Regresar al buscador
+            </a>
         </div>
+        @endif
 
    </section>
 
