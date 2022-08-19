@@ -1,5 +1,8 @@
 <html lang="en">
-<head>
+<head prefix=
+        "og: http://ogp.me/ns# 
+        fb: http://ogp.me/ns/fb# 
+        product: http://ogp.me/ns/product#">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
