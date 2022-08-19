@@ -28,7 +28,6 @@
     <meta property="product:condition" content="new">
     <meta property="product:availability" content="in stock">
     <meta property="product:retailer_item_id" content="{{$p->slug}}_000{{$p->id}}">
-    <meta property="product:fb_product_category" content="fb_tshirts">
 
 @endsection
 @php
