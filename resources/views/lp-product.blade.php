@@ -14,7 +14,8 @@
     <meta property="og:title" content="{{ucfirst(strtolower($p->name))}}">
     <meta property="og:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
     <meta property="og:image" content="{{Storage::url($p->image_main)}}">
-
+    <meta property="og:price:amount" content="{{$p->price}}">
+    <meta property="og:price:currency" content="USD">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://rintegrate.com/{{$p->interest->slug}}/{{$p->slug}}">
@@ -27,6 +28,7 @@
     <meta property="product:price:currency" content="USD">
     <meta property="product:condition" content="new">
     <meta property="product:availability" content="in stock">
+    <meta property="product:brand" content="Rintegrate">
     <meta property="product:retailer_item_id" content="{{$p->slug}}_000{{$p->id}}">
 
 @endsection
