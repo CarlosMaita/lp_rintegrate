@@ -1,11 +1,11 @@
 @extends('layouts.template')
 
 
-@section('title'){{$p->name}}@endsection
+@section('title'){{ucfirst(strtolower($p->name))}}@endsection
 
 @section('metas')
    <!-- Primary Meta Tags -->
-    <meta name="title" content="{{$p->name}}">
+    <meta name="title" content="{{ucfirst(strtolower($p->name))}}">
     <meta name="description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
 
     <!-- Open Graph / Facebook -->
@@ -18,7 +18,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://rintegrate.com/{{$p->interest->slug}}/{{$p->slug}}">
-    <meta property="twitter:title" content="{{$p->name}}">
+    <meta property="twitter:title" content="{{ucfirst(strtolower($p->name))}}">
     <meta property="twitter:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
     <meta property="twitter:image" content="{{Storage::url($p->image_main)}}">
 
