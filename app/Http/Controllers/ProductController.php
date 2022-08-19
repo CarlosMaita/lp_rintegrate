@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GoogleProductCategory;
 use App\Models\Interest;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -27,7 +28,8 @@ class ProductController extends Controller
     public function create ()
     {
         $interests = Interest::all();
-        return view('crm.create_product', compact('interests'));
+        $google_product_categories = GoogleProductCategory::all();
+        return view('crm.create_product', compact('interests', 'google_product_categories'));
     }
 
     public function store (Request $request)
@@ -45,6 +47,8 @@ class ProductController extends Controller
         $product->features = $request->features;
         $product->title_features = $request->title_features;
         $product->subtitle_features = $request->subtitle_features;
+        $product->google_product_category = $request->google_product_category;
+        
         $product->slug = Str::slug($request->name);
         $product->save();
 
@@ -55,7 +59,8 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $interests = Interest::all();
-        return view('crm.edit_product', compact('product', 'interests'));
+        $google_product_categories = GoogleProductCategory::all();
+        return view('crm.edit_product', compact('product', 'interests', 'google_product_categories'));
     }
     
     public function update(Request $request, $id)
@@ -67,6 +72,7 @@ class ProductController extends Controller
         $product->status = $request->status;
         $product->interest_id = $request->interest_id;
         $product->color_main = $request->color_main; 
+        $product->google_product_category = $request->google_product_category;
         if($request->image_main != null)
         {
             $product->image_main = $request->image_main->store('images', 'public');

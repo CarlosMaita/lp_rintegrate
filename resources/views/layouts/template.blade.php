@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <head prefix=
         "og: http://ogp.me/ns# 
         fb: http://ogp.me/ns/fb# 

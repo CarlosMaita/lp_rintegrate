@@ -78,6 +78,19 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="flex space-x-4 items-center px-3">
+                            <div class="w-full flex flex-wrap -mx-3 mb-6">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                                    Google Product Category 
+                                </label>
+                                <select name="google_product_category" id="google_product_category"
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                                    @foreach ($google_product_categories as $c)
+                                        <option value="{{$c->id}}">{{$c->category}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                         <div class="flex space-x-4 items-center">
                             <div class="w-full flex flex-wrap -mx-3 mb-6">
                                 <div class="w-full px-3">

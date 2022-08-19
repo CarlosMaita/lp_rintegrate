@@ -7,6 +7,7 @@
    <!-- Primary Meta Tags -->
     <meta name="title" content="{{ucfirst(strtolower($p->name))}}">
     <meta name="description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
+    <meta name="google_product_category" content="{{$p->google_product_category}}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="og:product">
