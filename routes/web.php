@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', HomeController::class . '@index')->name('home');
+Route::get('/s/{search}', HomeController::class . '@search')->name('home.search');
 
 Route::get('/admin', function () {
     return view('welcome');

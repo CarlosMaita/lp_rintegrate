@@ -13,6 +13,14 @@ class HomeController extends Controller
         $products = Product::all();
         return view('home', compact('products'));
     }
+
+    public function search($search)
+    {
+        $products = Product::where('name', 'like', '%'.$search.'%')->get();
+        return view('home', compact('products'));
+    }
+
+
     
     
 }
