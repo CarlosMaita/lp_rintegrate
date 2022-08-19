@@ -5,30 +5,30 @@
 
 @section('metas')
    <!-- Primary Meta Tags -->
-    <meta name="title" content="Rintegrate - {{$p->name}}">
+    <meta name="title" content="{{$p->name}}">
     <meta name="description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="og:product">
     <meta property="og:url" content="https://rintegrate.com/{{$p->interest->slug}}/{{$p->slug}}">
-    <meta property="og:title" content="Rintegrate - {{$p->name}}">
+    <meta property="og:title" content="{{$p->name}}">
     <meta property="og:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
     <meta property="og:image" content="{{Storage::url($p->image_main)}}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://rintegrate.com/{{$p->interest->slug}}/{{$p->slug}}">
-    <meta property="twitter:title" content="Rintegrate - {{$p->name}}">
+    <meta property="twitter:title" content="{{$p->name}}">
     <meta property="twitter:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
     <meta property="twitter:image" content="{{Storage::url($p->image_main)}}">
 
     {{-- metas de producto --}}
-    {{-- <meta property="product:brand" content="Rintegrate"> --}}
     <meta property="product:price:amount" content="{{$p->price}}">
     <meta property="product:price:currency" content="USD">
     <meta property="product:condition" content="new">
     <meta property="product:availability" content="in stock">
-    <meta property="product:retailer_item_id" content="{{$p->slug}}-{{$p->id}}">
+    <meta property="product:retailer_item_id" content="{{$p->slug}}_000{{$p->id}}">
+    <meta property="product:item_group_id" content="fb_tshirts">
 
 @endsection
 @php
