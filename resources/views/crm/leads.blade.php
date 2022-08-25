@@ -17,6 +17,7 @@
                             <th>Telefono</th>
                             <th>Fuente</th>
                             <th>Estatus</th>
+                            <th>Fecha</th>
                             {{-- <th class="text-right">...</th> --}}
                           </tr>
                         </thead>
@@ -26,7 +27,7 @@
                                     <td>{{$l->name}}</td>
                                     <td>{{$l->email}}</td>
                                     <td>{{$l->phone}}</td>
-                                    <td><a class="text-blue-700 hover:text-blue-900" href="{{url($l->source)}}">
+                                    <td><a class="text-blue-700 hover:text-blue-900 text-xm" href="{{url($l->source)}}">
                                         {{$l->source}}
                                         </a>
                                     </td>
@@ -36,6 +37,9 @@
                                         @else
                                             <span class="bg-red-500 text-white rounded-xl text-xs  px-2">No Disponible</span>
                                         @endif
+                                    </td>
+                                    <td>
+                                        {{$l->created_at}}
                                     </td>
                                     {{-- <td class="text-right">
                                         <div class="flex justify-end space-x-3">
