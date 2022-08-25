@@ -36,8 +36,29 @@
         </div>
         <script type="text/javascript">
             $(document).ready( function () {
-                $('#dt-table').DataTable();
+                $('#dt-table').DataTable( {
+                    language: {
+                        lengthMenu: 'Mostrar  _MENU_ registros por pagina',
+                        zeroRecords: 'No se ha encontrado items - Lo siento',
+                        info: 'Página _PAGE_ de _PAGES_',
+                        infoEmpty: 'Sin registros disponibles',
+                        infoFiltered: '(Filtrado de _MAX_ registros totales)',
+                        search: 'Buscar: ',
+                        paginate: {
+                            first:      "Primero",
+                            last:       "Último",
+                            next:       "Siguiente",
+                            previous:    "Anterior"
+                        },
+                     },
+                    }
+                );
             } );
         </script>
+        <style>
+            select[name="dt-table_length"]{
+                width: 60px;
+            }
+        </style>
     </body>
 </html>
