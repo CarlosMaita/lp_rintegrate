@@ -22,6 +22,11 @@ class LeadController extends Controller
         $lead->status = 'new';
         $lead->source = parse_url($request->header('Referer'), PHP_URL_PATH) ;
         $lead->save();
+
+        // $to="info@rintegrate.com";
+        // $asunto ="[IMP] New Lead - Tienda Rintegrate";
+        // $mensaje = "Nombre: ". $request->name . " \nEmail: " .  $request->email . " \nTelefono: "  . $request->phone . "\nFuente: ". $request->header('Referer');
+        // mail($to,$asunto,$mensaje);
         
         return redirect()->route('products.gracias', [
             'interest' => $request->interest_slug,

@@ -103,7 +103,7 @@ $color = $p->color_main;
                         Solo para Venezuela.
                     </span> 
                     <span class="text-xs text-white font-thin underline">
-                        Bolivares a Tasa de BCV 
+                        <!-- Bolivares a Tasa de BCV  -->
                     </span> 
                 </p>
                
@@ -116,9 +116,9 @@ $color = $p->color_main;
                             USD
                         </p>
                         <p class="text-white font-light text-5xl font-serif  w-32">Precio</p>
-                        <p class="text-white font-bold text-medium border-2 w-32 rounded-md">
+                        <!-- <p class="text-white font-bold text-medium border-2 w-32 rounded-md">
                             Envio Incluido
-                        </p>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -202,12 +202,12 @@ $color = $p->color_main;
                           USD
                       </p>
                       <p class="text-white font-light text-5xl font-serif  w-32">Precio</p>
-                      <p class="text-white font-bold text-medium border-2 w-32 rounded-md xl:hidden">
+                      <!-- <p class="text-white font-bold text-medium border-2 w-32 rounded-md xl:hidden">
                           Envio Incluido
                       </p>
                       <p class="text-xs text-white font-thin w-32">
                             Bolivares a Tasa de BCV
-                      </p>
+                      </p> -->
                   </div>
                 </div>
           </section>
