@@ -33,4 +33,10 @@ class LeadController extends Controller
             'product' => $request->product_slug,
         ]);
     }
+
+
+    public function index (){
+        $leads = Lead::All();
+        return view('crm.leads', compact('leads'));
+    }
 }
