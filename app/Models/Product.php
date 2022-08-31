@@ -34,7 +34,11 @@ class Product extends Model
 
     public function priceWithoutDecimals()
     {
-        return number_format($this->price, 0, '', '.');
+        if ($this->price < 10 ){
+            return number_format($this->price, 1, ',', '.');
+        }else{
+            return number_format($this->price, 0, ',', '.');
+        }
     } 
 
    
