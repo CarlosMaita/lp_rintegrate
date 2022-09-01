@@ -6,6 +6,8 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\Lead as Lead;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,7 +31,8 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
     Route::resource('products', ProductController::class);
     Route::resource('interests', InterestController::class);
     Route::get('/', function () {
-        return view('dashboard');
+        $newLeads =  Lead::countNew();
+        return view('dashboard' , compact('newLeads'));
     })->name('dashboard');
 
 });
