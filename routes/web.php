@@ -35,6 +35,7 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
 });
 
 Route::post('lead/store',  [LeadController::class, 'store'])->name('lead.store');
+Route::delete('lead/{id}',  [LeadController::class, 'delete'])->name('lead.delete');
 
 Route::get('/{interest}/{product}', [ProductController::class, 'lp'])
     ->where('interest', '[a-zA-Z0-9\-]+')

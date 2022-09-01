@@ -36,7 +36,15 @@ class LeadController extends Controller
 
 
     public function index (){
-        $leads = Lead::All();
+        $leads = Lead::where("status", "!=", "archived")->get();
         return view('crm.leads', compact('leads'));
     }
+
+    public function delete($id){
+        $lead = Lead::find($id);
+        $lead->status = "archived";
+        $lead->save();
+        return back();
+    }
+
 }

@@ -41,27 +41,18 @@
                                     <td>
                                         {{$l->created_at}}
                                     </td>
-                                    {{-- <td class="text-right">
+                                    <td class="text-right">
                                         <div class="flex justify-end space-x-3">
-                                            <a href="{{route('products.lp',[ $p->interest->slug, $p->slug] )}}" target="_blank">
-                                                <div class="px-3 bg-green-500 text-white rounded-md opacity-50 hover:opacity-100">
-                                                    ver
-                                                </div>
-                                            </a>
-                                            <a href="{{route('products.edit', $p)}}">
-                                                <div class="px-3 bg-blue-500 text-white rounded-md opacity-50 hover:opacity-100">
-                                                    Editar
-                                                </div>
-                                            </a>
-                                            <form action="{{route('products.destroy', $p)}}" method="post">
+                                            
+                                            <form action="{{route('lead.delete', $l)}}" method="post">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="px-3 bg-red-500 text-white rounded-md opacity-50 hover:opacity-100">
-                                                    Eliminar
+                                                    Archivar
                                                 </button>
                                             </form>
                                         </div> 
-                                    </td> --}}
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

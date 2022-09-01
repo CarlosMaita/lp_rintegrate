@@ -30,8 +30,6 @@ class Product extends Model
         return $this->belongsTo(Interest::class);
     }
 
-    
-
     public function priceWithoutDecimals()
     {
         if ($this->price < 10 ){
@@ -40,7 +38,4 @@ class Product extends Model
             return number_format($this->price, 0, ',', '.');
         }
     } 
-
-   
-
 }
