@@ -18,7 +18,7 @@
                             <th>Fuente</th>
                             <th>Estatus</th>
                             <th>Fecha</th>
-                            {{-- <th class="text-right">...</th> --}}
+                            <th class="text-right">...</th>
                           </tr>
                         </thead>
                         <tbody>
