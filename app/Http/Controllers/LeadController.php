@@ -46,5 +46,13 @@ class LeadController extends Controller
         $lead->save();
         return back();
     }
+    
+    public function contacted($id){
+        $lead = Lead::find($id);
+        $lead->status = "contacted";
+        $lead->save();
+        return back();
+    }
+
 
 }
