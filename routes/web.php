@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InterestController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StockController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\Lead as Lead;
@@ -34,7 +35,9 @@ Route::prefix('dashboard')->middleware('auth')->group(function () {
         $newLeads =  Lead::countNew();
         return view('dashboard' , compact('newLeads'));
     })->name('dashboard');
-
+    Route::get('stock', [StockController::class, 'index'])->name('stock.index');
+    Route::get('stock/{id}', [StockController::class, 'edit'])->name('stock.edit');
+    Route::put('stock/{id}', [StockController::class, 'update'])->name('stock.update');
 });
 
 Route::post('lead/store',  [LeadController::class, 'store'])->name('lead.store');

@@ -12,7 +12,7 @@
                    <h1 class="text-2xl">
                        Editar Producto</b> 
                    </h1>
-                    <form action="{{route('products.update', $product)}}" method="POST"  enctype="multipart/form-data">
+                   <form action="{{route('products.update', $product)}}" method="POST"  enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="flex space-x-4 items-center">
