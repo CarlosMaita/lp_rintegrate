@@ -130,8 +130,8 @@ $color = $p->color_main;
         >
         <div class="backdrop-blur-sm bg-black/10 h-screen xl:h-screen pt-10 pb-20 relative">
                 <div class="text-center py-10  ">
-                    <p class="text-main-color text-medium font-semibold md:text-xl">{{$p->subtitle_features}}</p>
                     <h2 class="text-white text-2xl md:text-5xl font-bold">{{$p->title_features}}
+                    <p class="text-white text-medium font-semibold md:text-xl">{{$p->subtitle_features}}</p>
                     </h2>
                 </div>
             <div class="block space-y-5 xl:flex">
@@ -152,8 +152,8 @@ $color = $p->color_main;
     <div class="xl:flex xl:justify-start bg-main-color py-5 ">
         {{-- imgen de producto --}}
      <section class="bg-main-color  h-72 xl:w-1/2 -mt-10 xl:-mt-5">
-          <div class="bg-white  h-72 w-72 xl:w-[28rem] mx-auto pt-5 -translate-y-10 transition hover:scale-110 ease-in-out delay-150">
-              <img class="md:w-2/3 mx-auto xl:block xl:w-[28rem] xl:h-[28rem] object-cover " src="{{ Storage::url($p->image_second) }}" alt="">
+          <div class="bg-white  h-72 w-72 xl:w-[28rem] mx-auto -translate-y-10 transition hover:scale-110 ease-in-out delay-150">
+              <img class="mx-auto xl:block xl:w-[28rem] xl:h-[28rem] object-cover " src="{{ Storage::url($p->image_second) }}" alt="">
           </div>
       </section>
       <div class="xl:w-1/2">

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::table('products', function (Blueprint $table) {
             $table->integer("min_stock")->default(1);
             $table->integer("stock")->default(0);
-            $table->string("unit");
+            $table->string("unit")->nullable();
         });
     }
 
