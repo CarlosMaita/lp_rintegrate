@@ -10,19 +10,18 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="og:product">
-    <meta property="og:url" content="https://rintegrate.com/{{$p->interest->slug}}/{{$p->slug}}">
+    <meta property="og:url" content="{{env('APP_URL')}}/{{$p->interest->slug}}/{{$p->slug}}">
     <meta property="og:title" content="{{ucfirst(strtolower($p->name))}}">
     <meta property="og:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
-    <meta property="og:image" content="{{Storage::url($p->image_main)}}">
+    <meta property="og:image" content="{{env('APP_URL')}}{{Storage::url($p->image_main)}}">
     <meta property="og:price:amount" content="{{$p->price}}">
     <meta property="og:price:currency" content="USD">
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rintegrate.com/{{$p->interest->slug}}/{{$p->slug}}">
+    <meta property="twitter:url" content="{{env('APP_URL')}}/{{$p->interest->slug}}/{{$p->slug}}">
     <meta property="twitter:title" content="{{ucfirst(strtolower($p->name))}}">
     <meta property="twitter:description" content="{{$p->description}}. Encuentra 🕵️ productos Increíbles 😎. Las mejores 🏷️promociones 🏷️. Envio Incluido en todas las compras 📦🛍️ Nuevo Centro de Compras Digital. ">
-    <meta property="twitter:image" content="{{Storage::url($p->image_main)}}">
-
+    <meta property="twitter:image" content="{{env('APP_URL')}}{{Storage::url($p->image_main)}}">
     {{-- metas de producto --}}
     <meta property="product:price:amount" content="{{$p->price}}">
     <meta property="product:price:currency" content="USD">
