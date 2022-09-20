@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('color_main')->default("#FF3737");
             $table->text('features')->nullable();
             $table->decimal('price', 8, 2, false)->nullable();
-            $table->string('status')->default('new');
+            $table->string('status')->default('diponible');
             //interest_id is a foreign key to interests table
             $table->unsignedBigInteger('interest_id');
             $table->foreign('interest_id')->references('id')->on('interests');
