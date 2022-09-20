@@ -38,11 +38,14 @@ $color = $p->color_main;
 @endphp
 @section('content')
     <style>
-        .bg-main-color{
+        .bg-main-color, .hover\:bg-main-color:hover{
             background-color: {{$color}};
         }
-        .text-main-color{
+        .text-main-color, .hover\:text-main-color:hover{
             color: {{$color}};
+        }
+        {
+            
         }
         .bg-imagen-background{
             background-image: url('{{ Storage::url($p->image_background)  }}');
@@ -66,8 +69,8 @@ $color = $p->color_main;
         </section>
 
         {{-- producto --}}
-        <section class="bg-main-color  py-5 md:py-10 xl:w-1/2">
-            <div class="space-y-2 xl:space-y-8">
+        <section class="bg-main-color px-5  py-5 md:py-10 xl:w-1/2">
+            <div class="space-y-2 xl:space-y-8 px-5">
                 <h1 class="text-3xl md:text-5xl xl:text-7xl font-bold text-center xl:text-left text-white uppercase">
                     {{$p->name}}
                 </h1>
@@ -126,20 +129,20 @@ $color = $p->color_main;
     </div>
 
     {{-- beneficios --}}
-    <section class=" bg-cover bg-imagen-background bg-[right_-15rem_top_0rem]  xl:pb-20 xl:h-screen"
+    <section class="bg-cover bg-imagen-background bg-[right_-15rem_top_0rem]  xl:pb-20 xl:h-screen"
         >
-        <div class="backdrop-blur-sm bg-black/10 h-screen xl:h-screen pt-10 pb-20 relative">
-                <div class="text-center py-10  ">
-                    <h2 class="text-white text-2xl md:text-5xl font-bold">{{$p->title_features}}
-                    <p class="text-white text-medium font-semibold md:text-xl">{{$p->subtitle_features}}</p>
-                    </h2>
-                </div>
-            <div class="block space-y-5 xl:flex">
+        <div class="h-fit backdrop-blur-sm bg-black/10  xl:h-screen pt-10 pb-20 relative">
+            <div class="text-center py-10  ">
+                <h2 class="text-white text-2xl md:text-5xl font-bold">{{$p->title_features}}
+                <p class="text-white text-medium font-semibold md:text-xl">{{$p->subtitle_features}}</p>
+                </h2>
+            </div>
+            <div class="block space-y-5 xl:space-y-0 xl:w-4/5 xl:mx-auto xl:flex xl:items-center xl:justify-center  xl:space-x-10">
                 @foreach(json_decode($p->features) as $feature)
-                    <div class="w-full text-center transition hover:-translate-y-10 ease-in-out ">
-                        <img class="w-28 xl:w-44 mx-auto " src="{{asset('img/producto01/icon.svg')}}" alt="">
-                        <div class="texto px-14 md:w-1/2 xl:w-full md:mx-auto text-center">
-                            <p class="text-main-color font-bold text-xl md:text-3xl xl:text-2xl">{{$feature->title}}</p>
+                    <div class="w-2/3 px-5 py-5 mx-auto rounded-md text-center transition hover:-translate-y-2 ease-in-out bg-white bg-opacity-20 hover:bg-main-color">
+                        <img class="w-20 xl:w-20 mx-auto" src="{{asset('img/producto01/icon.svg')}}" alt="">
+                        <div class="texto px-5 md:w-2/3 xl:w-full md:mx-auto text-center">
+                            <p class="text-white font-bold text-xl md:text-3xl xl:text-2xl">{{$feature->title}}</p>
                             <p class="text-white text-base md:text-xl xl:text-base">{{$feature->subtitle}}</p>
                         </div>
                     </div> 
@@ -213,7 +216,7 @@ $color = $p->color_main;
           </section>
       
           {{-- formulario --}}
-          <section class="bg-main-color py-10" id="form" >
+          <section class="bg-main-color py-10 px-5" id="form" >
              <p class="text-white md:text-xl px-4 xl:px-0 md:px-20 text-left md:text-left pb-5"><b>Compartenos</b> tus datos para comprar o solicitar información</p>
              <form class="px-4 space-y-2 md:px-20 xl:px-0 xl:pr-20" method="POST" action="{{route('lead.store')}}">
                 @csrf
@@ -226,16 +229,23 @@ $color = $p->color_main;
                   <input type="hidden" name="product_slug" value="{{$p->slug}}">
              </form>
           </section>
-      </div>
-    </div>
-    <script>
 
-    </script>
+        </div>
+    </div>
+    {{-- metodos de pago --}}
+    <section class="bg-white w-full px-5 py-10 xl:py-20">
+          <h3 class="pb-5 text-center text-xl md:text-3xl xl:text-4xl">Aceptamos los siguientes <br class="md:hidden"><b class="text-main-color">métodos de Pago</b></h3>
+          <img class="w-full pb-10 md:w-2/3 mx-auto xl:hidden" src="{{asset('img/metodo-pagos-mobile.png')}}" alt="metodos de pago">
+          <img class="w-full pb-10 md:w-4/5 mx-auto hidden xl:block" src="{{asset('img/metodo-pagos-desktop.png')}}" alt="metodos de pago">
+          <hr class=" bg-main-color w-20 h-1 mx-auto xl:w-40 xl:h-0.5">
+    </section>
+    
+    
 @endsection
 
 @section('footer')
 
-<footer class="py-3 bg-[#1E1F1D]">
+<footer class="pt-10 pb-5 bg-black">
     <div class="flex justify-evenly text-white pb-5">
     <a class="hover:opacity-70" target="_blank" href="https://rintegrate.com/politica-privacidad/">Politicas de Privacidad</a>
     <a class="hover:opacity-70" target="_blank" href="https://rintegrate.com/aviso-legal/">Aviso Legal</a>
