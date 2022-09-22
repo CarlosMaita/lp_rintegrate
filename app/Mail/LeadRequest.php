@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Lead;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -16,9 +17,9 @@ class LeadRequest extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Lead $lead)
     {
-        //
+        $this->lead = $lead;
     }
 
     /**
@@ -28,6 +29,8 @@ class LeadRequest extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+ 
+        return $this->subject('Nuevo Posible Cliente')
+                    ->view('mails.lead-request');
     }
 }
