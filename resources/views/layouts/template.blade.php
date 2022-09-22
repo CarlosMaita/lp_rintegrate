@@ -6,7 +6,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='Veneuela' name='geo.placename'/>
+    <meta content='6.42375;66.58973' name='geo.position'/>
+    <meta content='6.42375, 66.58973' name='ICBM'/> 
+    <meta content='Rintegrate' name='Author'/>
+    <meta content='general' name='rating'/>
+    <meta content='VE' name='geo.country'/>
     <link rel="icon" type="image/png" href="https://rintegrate.com/assets/img/favicon.png" />
+    <link rel = "alternate" href = "{{ url()->current() }}" hreflang = "es-VE" />
 
     <link rel="canonical" href="{{ url()->current() }}">
     <title>Rintegrate - @yield('title')</title>
