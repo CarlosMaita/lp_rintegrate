@@ -24,7 +24,8 @@ Route::get('/s', function(){ return redirect()->route('home'); });
 Route::get('/s/{search}', HomeController::class . '@search')->name('home.search');
 
 Route::get('/admin', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::prefix('dashboard')->middleware('auth')->group(function () {

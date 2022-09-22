@@ -81,8 +81,8 @@ $color = $p->color_main;
 
 <footer class="py-3 bg-[#1E1F1D]">
     <div class="flex justify-evenly text-white pb-5">
-    <a class="hover:opacity-70" target="_blank" href="https://rintegrate.com/politica-privacidad/">Politicas de Privacidad</a>
-    <a class="hover:opacity-70" target="_blank" href="https://rintegrate.com/aviso-legal/">Aviso Legal</a>
+    <a class="hover:opacity-70" target="_blank" href="https://rintegrate.co/politica-privacidad/">Politicas de Privacidad</a>
+    <a class="hover:opacity-70" target="_blank" href="https://rintegrate.co/aviso-legal/">Aviso Legal</a>
     </div>
     <p class="text-base text-white text-center">
         Rintegrate -Todos los derechos reservados. 2022
