@@ -26,10 +26,6 @@ class LeadController extends Controller
         $lead->save();
 
         $to="carlos.maita@rintegrate.com";
-        $asunto ="[IMP] New Lead - Tienda Rintegrate";
-        $mensaje = "Nombre: ". $request->name . " \nEmail: " .  $request->email . " \nTelefono: "  . $request->phone . "\nFuente: ". $request->header('Referer');
-        // mail($to,$asunto,$mensaje);
-
         Mail::to($to)
         ->send(new LeadRequest($lead));
 
