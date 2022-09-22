@@ -13,8 +13,15 @@ class LeadRequest extends Mailable
     use Queueable, SerializesModels;
 
     /**
-     * Create a new message instance.
+     * The order instance.
      *
+     * @var \App\Models\Lead
+     */
+    public $lead;
+
+    /**
+     * Create a new message instance.
+     * @param  \App\Models\Lead  $lead
      * @return void
      */
     public function __construct(Lead $lead)
